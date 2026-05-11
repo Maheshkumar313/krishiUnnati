@@ -13,7 +13,8 @@ import {
   Search,
   Bell,
   ArrowUpRight,
-  ArrowDownRight
+  ArrowDownRight,
+  Sprout
 } from 'lucide-react';
 
 const stats = [
