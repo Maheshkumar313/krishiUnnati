@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #142b1b;
+  --color-secondary: #3e5c45;
+  --color-accent: #c5a059;
+  --color-gold: #c5a059;
+  --color-earth: #4a3728;
+  --color-beige: #f2eadf;
+  --color-cream: #fdfaf3;
+  
+  --font-heading: "var(--font-heading)", serif;
+  --font-body: "var(--font-body)", sans-serif;
+
+  --shadow-premium: 0 20px 50px -12px rgba(20, 43, 27, 0.1);
+  --shadow-soft: 0 10px 30px -10px rgba(20, 43, 27, 0.05);
+}
+
+:root {
+  --background: #fdfaf3;
+  --foreground: #142b1b;
+  --primary: #142b1b;
+  --secondary: #3e5c45;
+  --accent: #c5a059;
+  --earth: #4a3728;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), serif;
+  font-weight: 400; /* Serif headings often look better less bold for luxury */
+  letter-spacing: -0.02em;
+}
+
+/* Custom scrollbar for organic feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdfaf3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #142b1b;
+}
+
+/* Luxury animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Transition for interactive elements */
+a, button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.luxury-card {
+  background: white;
+  border: 1px solid rgba(197, 160, 89, 0.1);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.luxury-card:hover {
+  box-shadow: var(--shadow-premium);
+  border-color: rgba(197, 160, 89, 0.3);
+}
